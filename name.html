@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My name is</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Hello Vue</h1>
+        <!--v-model instructs vue to bind the contents of the input to the data
+        then v-model adds eventListener to update the name
+        v-if only render the paragraph if string is entered-->
+        <label for="name"> Please enter your name: </label>
+        <input v-model="name" id="name">
+        <p v-if="name">
+            Your name is {{ name }}
+        </p>
+    </div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            name: "",
+        }
+    })
+</script>
+
+</body>
+</html>
